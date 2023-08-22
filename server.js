@@ -19,5 +19,13 @@ app.get("/magic/:question", (req, res)=>{
 
 
 
+app.get("/greeting" , (req, res) => {
+  res.send("<h1>Greetings</h>")
+})
+app.get("greetings/:name" , (req , res) => {
+  const greetingName = req.params.name
+  res.send(`<h2>Hello, ${greetingName} you're amazing and your're going to have an outstanding day!</h2>`)
+})
+
 app.listen(3000)
 
